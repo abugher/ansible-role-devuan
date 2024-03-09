@@ -1,0 +1,5 @@
+source_url:                     'http://deb.devuan.org/merged'
+source_components:
+  - 'main'
+  - 'contrib'
+  - 'non-free'
