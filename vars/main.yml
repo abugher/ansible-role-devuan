@@ -3,3 +3,4 @@ source_components:
   - 'main'
   - 'contrib'
   - 'non-free'
+  - 'non-free-firmware'
