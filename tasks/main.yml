@@ -2,7 +2,7 @@
 # The only Devuan system is on the least stable release.  No updates, security
 # patches, or backports are available, yet.  When it graduates to stable,
 # uncomment the appropriate sections.
-- include_tasks:                '../tasks/template_files.yml'
+- include_tasks:                'tasks/common/template_files.yml'
   vars:
     source_suite:               "{{ os_release_name }}"
     template_files:
@@ -12,7 +12,7 @@
         src:                    'templates/conf/sources.list.d/list.j2'
         dest:                   "/etc/apt/sources.list.d/devuan_{{ source_suite }}.list"
 
-- include_tasks:                '../tasks/template_files.yml'
+- include_tasks:                'tasks/common/template_files.yml'
   vars:
     source_suite:               "{{ os_release_name }}-updates"
     template_files:
@@ -22,7 +22,7 @@
         src:                    'templates/conf/sources.list.d/list.j2'
         dest:                   "/etc/apt/sources.list.d/devuan_{{ source_suite }}.list"
 
-- include_tasks:                '../tasks/template_files.yml'
+- include_tasks:                'tasks/common/template_files.yml'
   vars:
     source_suite:               "{{ os_release_name }}-security"
     template_files:
@@ -32,7 +32,7 @@
         src:                    'templates/conf/sources.list.d/list.j2'
         dest:                   "/etc/apt/sources.list.d/devuan_{{ source_suite }}.list"
 
-- include_tasks:                '../tasks/template_files.yml'
+- include_tasks:                'tasks/common/template_files.yml'
   vars:
     source_suite:               "{{ os_release_name }}-backports"
     template_files:
