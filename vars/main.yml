@@ -1,6 +1,18 @@
 source_url:                     'http://deb.devuan.org/merged'
+source_suites:                  
+  - "{{ os_release_name }}"
+  - "{{ os_release_name }}-security"
+  - "{{ os_release_name }}-updates"
+  - "{{ os_release_name }}-backports"
 source_components:
   - 'main'
   - 'contrib'
   - 'non-free'
   - 'non-free-firmware'
+keyring_file:                   '/usr/share/keyrings/devuan-archive-keyring.gpg'
+template_files:
+  - owner:                      'root'
+    group:                      'root'
+    mode:                       '0644'
+    src:                        'templates/conf/sources.list.d/sources.j2'
+    dest:                       "/etc/apt/sources.list.d/devuan_{{ os_release_name }}.sources"
