@@ -1,3 +1,4 @@
+# Unlike debian, devual-security is available from the same domain as the other suites.
 source_url:                     'http://deb.devuan.org/merged'
 source_suites:                  
   - "{{ os_release_name }}"
